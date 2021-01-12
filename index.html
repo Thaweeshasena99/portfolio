@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume | Thaweesha Senanayake</title>
+	<link rel="stylesheet" href="Style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<script src="https://kit.fontawesome.com/1b2d18ab03.js"></script>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="https://i.ibb.co/V2vF7hV/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://i.ibb.co/Y3pV7ZX/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://i.ibb.co/TYqHMWG/android-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://i.ibb.co/2NG6ZsB/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://i.ibb.co/hKPYCds/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://i.ibb.co/D4jfkH6/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://i.ibb.co/SBgw1Wd/android-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://i.ibb.co/m5RfZVF/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/wrJJ7BZ/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://i.ibb.co/6DrrmvW/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/99wwdKc/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://i.ibb.co/RC0FKFS/android-icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/Vp876db/favicon-16x16.png">
+	<!-- <link rel="manifest" href="fav/manifest.json"> -->
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://i.ibb.co/SBgw1Wd/android-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<style>
+		*,body,html{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+		}
+		body,html {
+			font-family: 'poppins',sans-serif;
+			width: 100%;
+		}
+		.loader{
+			position:fixed;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+		.hidden{
+			display: none;
+		}
+		/*header bar design -----------------------------*/
+		.header{
+			background-color: white;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			width: 100%;
+			height:70px; 
+			z-index: 2;
+		}
+		.header .logo{
+			padding-left:200px;
+			color: #FFB800;
+			text-decoration: none;
+			font-size: 25px;
+			font-weight: bold;
+			line-height: 70px;
+			
+		}
+		.header .nav-bar{
+			float: right;
+			padding-right:200px;
+		}
+		.header .nav-bar ul  {
+			margin:0;
+			padding: 0;
+			display:flex;
+		}
+		.header .nav-bar ul li{
+			list-style:none;
+		}
+		.header .nav-bar ul li a{
+			margin: 0 35px;
+			display: block;
+			text-decoration: none;
+			line-height: 70px;
+			height: 70px;
+			color: #000;
+		}
+		.header .nav-bar ul li a:hover{
+			border-bottom: 3px solid black;
+		}
+		.menu-toggle{
+			float: right;
+			line-height: 70px;
+			font-size: 25px;
+			cursor: pointer;
+			display: none;
+		}
+		/*---------------------------*/
+		/*header media queries */
+
+		@media screen and (max-width: 1200px){
+			.header .logo{padding-left:100px;}
+			.header .nav-bar{padding-right:100px;}
+		}
+		@media screen and (max-width: 1000px){
+			.header .logo{padding-left:50px;}
+			.header .nav-bar{padding-right:50px;}
+		}
+		@media screen and (max-width: 850px){
+			.header .nav-bar{
+				position: absolute;
+				padding: 0;
+				width: 100%;
+				top: 70px;
+				left: -100%;
+				background: #FFB800;
+				transition: left 0.5s;
+			}
+			.header .active{
+				left: 0;
+			}
+			.header .nav-bar ul {
+				display: block;
+				text-align: center;
+			}
+			.header .nav-bar ul li a{
+				margin: 0;
+			}
+			.header .nav-bar ul li a:hover{
+				border:none;
+				background: #F8F8F8;
+			}
+			.menu-toggle{
+				display: block;
+				padding-right:50px;
+			}
+
+		}
+		@media screen and (max-width: 610px){
+			.header .logo{padding-left:20px;}
+			.menu-toggle{padding-right:20px;}
+		}
+		/*header bar -End --------------------------------------*/
+		/*------------------------------------------------------*/
+		/*Home page Body content- Start-------------------------*/
+		.home{
+			background-color:  #F8F8F8;
+			min-height:100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+			scroll-margin-top: 90px;
+			
+		}
+		.box-1{
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+			width: 100%;
+			padding: 100px 200px 50px;
+		}
+		@media screen and (max-width: 1200px){
+			.box-1{padding: 100px 100px}
+		}
+		.desc-1 .first-line{
+			font-weight: 400;
+			margin-bottom: 20px;
+		}
+		.desc-1 >h1{
+			font-size: 2.5em;
+			line-height: 1.2cm;
+			margin-bottom: 20px;
+		}
+		.desc-1 >h1 >span {
+			color: #FFB800;
+		}
+		.desc-1 .third-line {
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		.desc-1 p{
+			width: 400px;
+			font-weight: 400;
+			color: #858585;
+			margin-bottom: 20px;
+		}
+		.desc-1 .btn-1 {
+			width: 150px;
+			background-color: #FFB800;
+			border:2px solid #FFB800 ;
+			font-family: 'poppins',sans-serif;
+			font-size: 1.5em;
+			font-weight: 500;
+			color: #fff;
+			height: 1.5cm;
+			cursor: pointer;
+			outline: none;
+			position: relative;
+			z-index: 1;
+		}
+		.desc-1 .btn-1:hover{
+			color:#fff;
+			background: none;
+		}
+		.desc-1 .btn-1::before{
+			content: '';
+			background-color: #000;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 0%;
+			transition: width 0.3s linear;	
+		}
+		.desc-1 .btn-1:hover::before{
+			background-color: #000;
+			z-index: -1;
+			width: 100%;
+			right: 0;
+		}
+		.img-1 img{
+			max-width: 400px;
+		}
+		.social {
+			width: 200px;
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 50px;
+		}
+		.social  a{
+			text-decoration: none;
+			color: black;
+			font-size: 2.2em;
+		}
+		.social a i:hover{
+			color: #FFB800;
+			animation: rotate-btn .3s 1;
+		}
+		@keyframes rotate-btn {	
+			50%{transform: rotate(20deg);}	
+			0% {transform: rotate(0);}
+			100%{transform: rotate(-20deg);}
+		}
+
+		/*home page media queries*/
+		@media screen and (max-width: 1000px){
+			.box-1{padding: 100px 50px;}
+			.img-1 img{width: 350px;}
+		}
+		@media screen and (max-width: 850px){
+			.box-1{
+				padding: 100px 50px;
+
+			}
+			.img-1 img{width: 220px;}
+			
+			/**/
+			.desc-1 .first-line{font-size: 12pt;margin-bottom: 10px;}
+			.desc-1 h1{font-size: 20pt;line-height: 0.9cm;margin-bottom: 10px;}
+			.desc-1 .third-line{font-size: 12pt;margin-bottom: 10px;}
+			.desc-1 p{font-size: 10pt;width: 300px;}
+			.desc-1 .btn-1 {height: 1cm;font-size: 12pt;width: 80%}
+			.social  a{font-size: 20pt;}
+
+		}
+		@media screen and (max-width: 610px){
+			.box-1{
+				padding: 100px 20px;
+			}
+		}
+		@media screen and (max-width: 570px){
+			.box-1{
+				padding: 30px 20px;
+				flex-direction: column-reverse;
+			}
+			.desc-1{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.desc-1 >h1, .desc-1 h3,.desc-1 p{text-align: center;}
+		}
+		/*Home page Body content- End --------------------------*/
+
+		/*resume page design -Strat ------------------------------*/
+			/*about section*/
+		.about{
+			scroll-margin-top: 90px;
+			min-height: 100vh;
+			padding: 100px 0; 
+			background-color: #000;
+			background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8) ), url('https://i.ibb.co/RH7pgBP/img-3.jpg');
+			background-size: cover;
+		}
+		.common h2{
+			font-weight: 400;
+			font-size: 2.2em;
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+			text-align: center;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 12px;
+			margin-bottom: 50px;
+			color: #fff;
+		}
+		.common h2::before{
+			content: '';
+			position: absolute;
+			background-color:#FFB800; 
+			bottom: 0;
+			width: 50px;
+			height: 0.15cm;
+			border-radius: 18px;
+		}
+		.desc-2{
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+
+			
+		}
+		.desc-2 p{
+			background-color: rgba(0,0,0,0.2);
+			text-align: center;
+			padding: 50px;
+			width: 500px;
+			border-radius: 10px;
+			-webkit-box-shadow: 0px 0px 50px 50px #fff; 
+			box-shadow: 0px 0px 5px 0px #EFEFEF;
+			color: #fff;
+		}
+		@media screen and (max-width:550px){
+			.desc-2 p{
+				width: 300px;
+				padding: 20px;
+				font-size:11pt;
+			}
+		}
+		/*--------------------*/
+		/*--------------about section end*/
+		/*-----------education Section*/
+		.education {
+			scroll-margin-top: 90px;
+			background-color:  #F8F8F8;
+			min-height: 100vh;
+			padding: 100px 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.education h2{
+			color: #000;
+		}
+		.point{
+			width: 700px;
+			display: grid;
+			grid-template-columns: 80% 20%;
+			margin-bottom: 20px;
+
+		}
+		.feild-row h3{
+			
+			font-weight: 600;
+			position: relative;
+			margin-left: 40px;
+		}
+		.feild-row h4{
+			font-weight: 500;
+			color:  gray;
+			margin-left: 40px;
+		}
+		.feild-row p {
+			margin: 20px 0  0 70px;
+		}
+		.dot{
+			position: absolute;
+			background-color: #FFB800;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			margin-top: 4px;
+		}
+
+		.year{
+			font-weight: 400;
+		}
+		@media screen and (max-width:800px){
+			.point{
+				width: 500px;
+				grid-template-columns: auto;
+			}
+			.year{
+				margin-top: 10px;
+				margin-left: 40px;
+				font-weight: 
+			}
+		}
+		@media screen and (max-width:580px){
+			.education{padding: 100px 20px;}
+			
+			.point{
+				width: 400px;
+				grid-template-columns: auto;}
+			.feild-row h3,.feild-row h4,.feild-row p{
+				font-size: 12pt;
+				margin-left: 20px;
+			}
+			.year{margin-left: 20px;font-size: 11pt;}
+			.dot{
+				width: 10px;
+				height: 10px;
+			}
+		}
+		@media screen and (max-width:420px){
+			.point{width: 300px;
+				grid-template-columns: auto;	}
+			.feild-row h3,.feild-row h4,.feild-row p{
+				font-size: 11pt;
+				margin-left: 15px;
+			}
+			.year{margin-left: 15px;font-size: 11pt;}
+		}
+		/*---------------*-/*education Section End*/
+		/*skills section start*/
+
+		.skills {
+			width: 100%;
+			min-height: 100vh;
+			padding: 100px 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.skills h2{color:#000;}
+
+
+		.row{
+			width: 50%;
+			margin-bottom: 20px;
+		}
+		.row h4{
+			font-weight: 500;
+		}
+		.bar-row{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.bar-row h4{
+			font-weight: 400;
+		}
+		.bar{
+			border-radius: 12px;
+			width: 80%;
+			height: 0.3cm; 
+			background-color: lightgray;
+			position: relative;
+			
+		}
+		.ruler{
+			position: absolute;
+			border-radius: 12px;
+			background-color: #FFB800;
+			top: 0;
+			left: 0;
+			height: 100%;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+			
+
+		}
+		.html{animation-name: html;}
+		.css{animation-name: css;}
+		.js{animation-name: js;}
+		.java{animation-name: java;}
+		.python{animation-name: python;}
+		.ills{animation-name: ills;}
+
+		@keyframes html{
+			from{width: 0%;}
+			to{width: 90%}	
+		}
+		@keyframes css{
+			from{width: 0%;}
+			to{width: 80%}	
+		}
+		@keyframes js{
+			from{width: 0%;}
+			to{width: 50%}	
+		}
+		@keyframes java{
+			from{width: 0%;}
+			to{width: 50%}	
+		}
+		@keyframes python{
+			from{width: 0%;}
+			to{width: 50%}	
+		}
+		@keyframes ills{
+			from{width: 0%;}
+			to{width: 95%}	
+		}
+		@media screen and (max-width:850px){
+			.row{width: 70%;}
+		}
+		@media screen and (max-width:550px){
+			.row{width: 80%;}
+		}
+		@media screen and (max-width:350px){
+			.row{width: 92%;}
+			.bar{height: 0.25cm}
+		}
+		/*skills section end*/
+		/*resume page design -End ------------------------------*/
+
+		/*portfolio page design*/
+		.show{display: flex;}
+		.hide{display: none;}
+
+		.portfolio{
+			padding: 100px 0;
+			scroll-margin-top: 90px;
+			min-height: 100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+		}
+		.portfolio h2{color:#000;}
+
+
+		.tab-container {
+			width: 70%;
+		}
+
+
+		.tab-container .ul{
+			min-height: 1cm;
+		}
+		.tab-container .ul ul{
+			padding: 0 20px;
+			height: 1cm;
+			display: flex;
+			justify-content: space-between;
+		}
+		.tab-container .ul ul li{
+			height: 100%;
+			display:block;
+			list-style: none;
+			outline: none;
+			text-decoration: none;
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+			color: #000;
+			font-size: 13pt;
+			outline: none;
+			cursor: pointer;
+			
+		}
+		.active-link{border-bottom: 2px solid black;}
+
+		.tab-container .ul ul li:hover{
+			border-bottom: 2px solid black;
+		}
+
+		.grid{
+			margin-top: 20px;
+			width: 100%;
+			height: 70vh;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			scroll-padding-bottom:10px;
+			border:3px solid #B5B5B5;
+			border-radius: 5px;
+			padding:10px;
+		}
+		.grid::-webkit-scrollbar {
+			
+		  	width: 10px;     
+
+		}
+		.grid::-webkit-scrollbar-track{
+			 padding: 10px 0;  
+			  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			 background:#00C0FF;  
+		}
+		.grid::-webkit-scrollbar-thumb{
+			background-color: #F3DF00;    /* color of the scroll thumb */
+		  	border-radius: 20px;     
+
+		}
+		/**/
+		.gallery {
+
+		  flex-wrap: wrap;
+		  padding: 0 4px;
+		}
+
+		.column {
+		  flex: 25%;
+		  max-width: 100%;
+		  padding: 0 4px;
+		}
+
+		.column img {
+		  margin-top: 8px;
+		  vertical-align: middle;
+		  width: 100%;
+		  -webkit-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			-moz-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+		}
+		.gallery-3{
+			width: 100%;
+			justify-content: center;
+		}
+		.gallery-3 .column-3{
+		  -webkit-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			-moz-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+		}
+
+		.more{
+			display:flex;
+			justify-content:center;
+			margin-top: 50px;
+
+		}
+		.more a{
+			text-decoration: none;
+			text-align: center;
+			color: #0060FF;
+			font-size: 15pt;
+		}
+		.more a:hover{
+			color: #6DA4FF;
+		}
+		@media screen and (max-width:1100px){
+			.grid{padding: 0 2px;}
+			.tab-container {
+				width: 80%;
+			}
+			.column {
+		 	 	flex: 50%;
+		 	 	max-width: 50%;
+		 	 	padding: 0 4px;
+		 	 }
+
+		}
+		@media screen and (max-width:600px){
+			.tab-container {
+				width: 80%;
+			}
+			.tab-container .ul{
+				padding: 0;
+			}
+			.tab-container .ul ul li{
+				font-size: 12pt;
+			}
+			.grid{padding: 0 2px;}
+			.column {
+		 	 	flex: 100%;
+		 	 	max-width: 100%;
+		 	 }
+		}
+		@media screen and (max-width:375px){
+			.tab-container {
+				width: 90%;
+			}
+			.tab-container .ul{
+				padding: 0;
+			}
+			.tab-container .ul ul{flex-direction: column;align-items: center;}
+			.tab-container .ul ul li{
+				margin-bottom: 20px;
+				font-size: 12pt;
+			}
+			.tab-container .ul ul li:hover{border-bottom:0;}
+			.active-link{border-bottom:0;}
+
+			.grid{
+				margin-top: 80px;
+			}
+		}
+
+		/*------------------*/
+		/*Contact Details */
+		.co-details{
+			width: 100%;
+			background-color: #FFB800;
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+		}
+		.co-details h2{text-align: center;font-weight:500;padding: 20px;}
+		.co-grid{display: grid;grid-template-columns: auto auto auto;margin-top: 20px;}
+		.col{display: flex; flex-direction: column; align-items: center;}
+		.col p{padding: 15px;font-size: 20px;}
+		.icon {
+			background-color:#fff;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+		.icon i{
+			font-size: 25px;
+			color:#000;
+		}
+		@media screen and (max-width: 815px){
+			.co-grid{grid-template-columns: auto}
+
+		}
+		@media screen and (max-width: 365px){
+
+			.icon{width: 50px;height: 50px;}
+			.icon p{font-size:15px;}
+			.col p{font-size: 16px;}
+		}
+		/*contact page design start ---------*/
+		/*-------------*/
+		.contact{
+			width: 100%;
+			min-height: 100vh;
+			scroll-margin-top:90px;
+			padding: 100px 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.contact-container{
+			width: 60%;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			-webkit-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			-moz-box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+			box-shadow: 0px 0px 14px 0px rgba(194,194,194,1);
+		}
+		.contact-container h2{
+			padding: 10px 10px 20px;
+			font-weight: 500;
+			font-size: 20pt;
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+		}
+
+		.form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+		.form >input, textarea{
+			width: 90%;
+			margin-bottom: 20px;
+			background-color: #F8F8F8;
+			border-radius: 18px;
+			border:none;
+			padding-left: 20px;
+			font-family: 'poppins',sans-serif;
+			outline: none;
+
+		}
+		.form >input{
+			height: 1.3cm;
+		}
+		.form >textarea {
+			padding-top: 10px;
+			height: 2cm;
+			resize: vertical;
+		}
+		.submitBtn {
+			background-color: #FFB800;
+			padding: 10px;
+			font-size: 15pt;
+			border:none;
+			outline: none;
+			cursor: pointer;
+			transition: background-color 0.3s linear;
+		}
+		.submitBtn:hover{
+			background-color: #000;
+			color: #fff;
+		}
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		input:-webkit-autofill:active {
+		    -webkit-box-shadow: 0 0 0 30px #F8F8F8 inset !important;
+		    -webkit-text-fill-color: #000;
+		}
+		.error{
+			font-weight: 500;
+			font-size: 12pt;
+			color: red;
+			background-color: #FFB800;
+			padding: 10px;
+			margin-bottom: 10px;
+			border:2px solid #0D0D0D;
+
+			display:none;
+		}
+		@media screen and (max-width:1200px){
+			.contact{
+				padding: 100px 30px;
+			}
+			.contact-container{
+				width: 60%;
+			}
+		}
+		@media screen and (max-width:800px){
+			.contact{
+				padding: 100px 0;
+			}
+			.contact-container{
+				width: 90%;
+			}
+		}
+		@media screen and (max-width:380px){
+			.contact{
+				padding: 100px 0;
+			}
+			.contact-container{
+				padding: 0 0 10px 0;
+				width: 90%;
+			}
+		}
+		/*contact page design End ---------*/
+
+		.footer{
+			background-color: black;
+			padding: 50px;
+
+		}
+		.footer >h4{
+			text-align: center;
+			font-weight: 400;
+			color: white;
+		}
+
+
+		/*media queries*/
+
+
+	</style>
+
+
+</head>
+
+<body>
+	<div class="loader">
+			<img src="img/loader-2.gif" alt="Loading...." width="150px;">
+	</div>
+	<div class="header">
+		<a href="#home" class="logo">THAWEESHA.</a>
+		<div class="nav-bar">
+			<ul> 
+				<li><a href="#home">Home</a></li>
+				<li><a href="#resume">Resume</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu-toggle">
+			<i class="fas fa-bars" id="menuIcon"></i>
+		</div>
+	</div>
+	
+
+	<!-- Home page  -->
+	<div class="home" id="home" data-aos="fade-up">
+		
+		<!-- Home page Body Content -->
+		
+		<div class="box-1">
+			<div class="desc-1">
+				<h3 class="first-line">Hello Everyone,</h3>
+				<h1>I'm <span>Thaweesha<br>Senanayake,</span></h1>
+				<h3 class="third-line">Freelance Designer and Developer</h3>
+				<p>Experienced on designing about one year and remotely work within clients. Also new to developer feild and Start journey with it.</p>
+				<button class="btn-1" src="#resume">Check me</button>
+			</div>
+
+			<div class="img-1">
+				<img src="https://i.ibb.co/60540bJ/img-1.png" alt="img-1" border="0">
+			</div>
+		</div>
+		<div class="social">
+			<a href="https://www.facebook.com/thaweeshasenanayake" target="_blank"><i class="fab fa-facebook-square"></i><a>	
+			<a href="https://www.instagram.com/thaweeshasenanayake" target="_blank"><i class="fab fa-instagram-square"></i><a>	
+			<a href="https://twitter.com/thaweeshasena" target="_blank"><i class="fab fa-twitter-square"></i><a>	
+			<a href="https://www.linkedin.com/in/thaweesha-senanayake/" target="_blank"><i class="fab fa-linkedin"></i><a>	
+		</div>
+	</div>
+	
+	<!-- Home page -End -->
+	<!-- Resume Page Start -->
+	<!-- about -->
+	<div class="about common" id="resume" data-aos="fade-up">
+		<h2>About Me</h2>
+		<div class="desc-2">
+			<p>I am friendly, loyal and clearly dedicated individual who has an ambition to succeed in any given environment. I love to learn, and I am always up to a challenge whenever the situation. I get along with all others, while also working efficiently on my own. I am trying to build my career in the IT Industry and use my knowledge and skills to contribute to the organization’s goals. </p>
+		</div>
+	</div>
+
+	<!-- Education -->
+
+	<div class="education common" data-aos="fade-up">
+		<h2>Education</h2>
+
+		<div class="point">
+			<div class="feild-row">
+				<span class="dot"></span>
+				<h3 class="bullet">Undergraduate of Bachelor of Software Engineer</h3>
+				<h4>The Open University Sri Lanka</h4>
+			</div>
+			<h4 class="year">2020 - Present</h4>	
+		</div>
+
+		<div class="point">
+			<div class="feild-row">
+				<span class="dot"></span>
+				<h3 class="bullet">G.C.E. Advanced Level Examination</h3>
+				<h4>MR/ Thelijjawila Central College , Matara</h4>
+				<p>Physical Science Stream <br>
+					B & 2 C Passes</p>
+			</div>
+			<h4 class="year">2019</h4>	
+		</div>
+
+		<div class="point">
+			<div class="feild-row">
+				<span class="dot"></span>
+				<h3 class="bullet">G.C.E. Ordinary Level Examination</h3>
+				<h4>G/ Neluwa National School ,Galle </h4>
+				<p>A -7, B - 1,  C- 1</p>
+			</div>
+			<h4 class="year">2015</h4>	
+		</div>
+
+		<div class="point">
+			<div class="feild-row">
+				<span class="dot"></span>
+				<h3 class="bullet">Completed Java Programming Course</h3>
+			</div>
+			<h4 class="year">2019</h4>	
+		</div>
+
+	</div>
+
+	<!-- Education End -->
+	<!-- skill bars -->
+
+	<div class="skills common" data-aos="fade-up">
+		<h2>My Skills</h2>
+
+		<div class="row">
+			
+			<h4>HTML5</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler html"></span></div>
+				<h4>90%</h4>
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<h4>CSS3</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler css"></div>
+				<h4>80%</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			<h4>JAVASCRIPT</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler js"></div>
+				<h4>50%</h4>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<h4>JAVA</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler java"></div>
+				<h4>50%</h4>
+			</div>
+
+		</div>
+		<div class="row">
+			<h4>PYTHON</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler python"></div>
+				<h4>50%</h4>
+			</div>
+
+		</div>
+		<div class="row">
+			<h4>ADOBE ILLUSTRATOR</h4>
+			<div class="bar-row">
+				<div class="bar"><span class="ruler ills"></div>
+				<h4>95%</h4>
+			</div>
+
+		</div>	
+	</div>
+	<!-- Resume Page End -->
+	<!-- Portfolio -->
+	<div class="portfolio common" id="portfolio" data-aos="fade-up">
+		<h2>Portfolio</h2>
+		<div id="tabs" class="tab-container">
+		
+			<div class="ul">
+				<ul>
+					<li class="active-link activeOne" id="tab-1" onclick="showTab(1);">Social Media</li>
+					<li id="tab-2" onclick="showTab(2);">Branding</li>
+					<li id="tab-3" onclick="showTab(3);">UI designs</li>
+				</ul>
+			</div>
+
+
+			<div class="grid">
+				<div id="tabs-1" class="gallery show">
+				 	<div class="column">
+				 		<img src="https://i.ibb.co/yQP5248/2.jpg" alt="2" border="0">
+				 		<img src="https://i.ibb.co/BGJszNY/1.jpg" alt="1" border="0">
+				 		<img src="https://i.ibb.co/DGRXzNw/5.jpg" alt="5" border="0">
+				 	</div>
+				 	<div class="column">
+					    <img src="https://i.ibb.co/Q8T27M2/3.jpg" alt="3" border="0">
+					    <img src="https://i.ibb.co/DwBh9sX/4.jpg" alt="4" border="0">
+					   	<img src="https://i.ibb.co/3MT08LP/14.jpg" alt="14" border="0">
+				 	</div>
+				</div>
+
+				<div id="tabs-2" class="gallery hide">
+				  	<div class="column">
+					    <img src="https://i.ibb.co/r586J1f/6.jpg" alt="6" border="0">
+					    <img src="https://i.ibb.co/yRh58QW/7.jpg" alt="7" border="0">
+					    <img src="https://i.ibb.co/XXzNxQ9/9.jpg" alt="9" border="0">
+				 	</div>
+				 	<div class="column">
+					    <img src="https://i.ibb.co/LCrK48K/8.jpg" alt="8" border="0">
+					   
+					    <img src="https://i.ibb.co/nccKZ4B/11.jpg" alt="11" border="0">
+					   	<img src="https://i.ibb.co/3cgmCQq/13.jpg" alt="13" border="0">
+				 	</div>
+
+				</div> 
+
+				<div id="tabs-3" class="gallery-3 hide">
+				 	<div class="column-3">
+				 		<img src="https://i.ibb.co/RCwsXrk/12.jpg" alt="12" border="0">
+				 	</div>
+				</div>
+			</div>
+			<div class="more">
+				<a href="https://www.behance.net/blurpiclk" target="_blank">Click here for show more..</a>
+			</div>
+			
+		</div>
+
+
+
+	</div>
+
+	<!-- contact details -->
+	<div class="co-details">
+		<h2>Contact Information</h2>
+		<div class="co-grid">
+
+			<div class="col">
+				<span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+				<p>No:22; Mawanana, Neluwa.</p>
+			</div>
+
+			<div class="col">
+				<span class="icon"><i class="fas fa-phone-alt"></i></span>
+				<p>+94 77 30 35 237</p>
+			</div>
+
+			<div class="col">
+				<span class="icon"><i class="fas fa-envelope"></i></span>
+				<p>thaweeshasenanayake@gmail.com</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Contact page Design Start -->
+
+	<div class="contact" id="contact" data-aos="fade-up">
+		
+		<div class="contact-container" >
+			<h2>Contact Me</h2>
+			<h3 class="error">Feild can not be empty !!</h3>
+			<form action="" class="form" autocomplete="off">
+				<input type="text" placeholder="Name" id="name">
+				<input type="email" placeholder="Email" id="email"> 
+				<textarea  placeholder="Message" rows="5" id="text"></textarea> 
+
+				<button class="submitBtn">Submit</button>
+			</form>
+			<p class="message"></p>
+		</div>
+
+	</div>
+	<!-- Contact page Design End -->
+	<!-- footer start -->
+
+	<div class="footer">
+		<h4>Copyright © 2020 | Thaweesha Senanayake</h4>
+	</div>
+	<!-- footer  End-->
+  
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="Script.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script type="text/javascript">
+		const name = document.querySelector("#name");
+		const email = document.querySelector("#email");
+		const text = document.querySelector("#text");
+
+		$(function() {
+			$(".menu-toggle").click(function() {
+				$(".nav-bar").toggleClass('active');
+				$("#menuIcon").toggleClass('fa-times');
+			});
+			$(".header .nav-bar ul li a").click(function() {
+				$(".nav-bar").toggleClass('active');
+				$("#menuIcon").toggleClass('fa-times');
+			});
+			$(".btn-1").click(function(){
+				$('html,body').animate({
+					scrollTop: $("#resume").offset().top="680"},0);
+			});
+			$('form').submit(function(event) {
+				event.preventDefault();
+
+				if ((name.value =='') || (email.value=='') || (text.value=='')) {
+					$('.error').css({
+						"display": 'block',
+					});
+					setTimeout( ()=>{
+						$('.error').css({"display": 'none',});
+					},2000);
+				}
+				else{
+					$('form').hide();
+					$('.message').append("Thank you for Contact Me");
+				}
+				
+			});
+			$('.tab-container .ul ul li').hover(function() 
+				{
+					$(this).addClass('active-link');
+					$('.activeOne').removeClass('active-link');
+
+				}, function() {
+					$(this).removeClass('active-link');
+					$('.activeOne').addClass('active-link');
+
+			});
+			$(window).on('load',function(){
+				$('.loader').hide();
+			});
+			
+		});
+
+		function showTab (tabNumber) {
+			$('.show:first').addClass('hide');
+			$('.show:first').removeClass('show');
+			$('#tabs-'+tabNumber).addClass('show');
+			$('#tabs-'+tabNumber).removeClass('hide');
+			$('.active-link:first').removeClass('active-link');
+			$('.activeOne:first').removeClass('activeOne');
+			$('#tab-'+tabNumber).addClass('active-link');
+			$('#tab-'+tabNumber).addClass('activeOne');
+		}
+
+
+	</script>
+  	<script>
+    	AOS.init();
+  	</script>
+
+</body>
+</html>
